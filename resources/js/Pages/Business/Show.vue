@@ -179,8 +179,8 @@ export default {
                 return {}; // return empty object
         },
         images: function () {
-            const images = this.business.images.map( image => image);
-            console.log("images", images);
+            const images = JSON.parse(this.business.images);
+            console.log("this ---->images", images);
            return images;
         },
     },    
