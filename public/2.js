@@ -165,7 +165,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           });
         };
 
-        var images = this.business.images;
+        var images = JSON.parse(this.business.images);
         images.map(function (image) {
           toDataURL(image).then(function (dataUrl) {
             return _this.images.push({
@@ -230,11 +230,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _this3 = this;
 
       var filesArray = Array.from(event.target.files);
-      var file = filesArray[0];
-      console.log('files -->', filesArray);
 
       if (this.mode === 'create') {
         if (filesArray.length > 0) {
+          this.images = [];
+
           var _iterator = _createForOfIteratorHelper(filesArray),
               _step;
 
@@ -252,7 +252,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
               };
 
-              console.log('fil ===>', fil);
               reader.readAsDataURL(fil);
             };
 

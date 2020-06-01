@@ -130,7 +130,7 @@
                             reader.readAsDataURL(blob);
                         }));
 
-                        const images = this.business.images;
+                        const images = JSON.parse(this.business.images);
                         images.map( image => {
                                 toDataURL(image).then(dataUrl => this.images.push({url: dataUrl}))
                         });
@@ -160,11 +160,9 @@
 
             onImagePicked(event){
                 const filesArray =  Array.from((event.target).files);
-                const file = filesArray[0];
-                console.log('files -->', filesArray);
-
                 if (this.mode === 'create') {
                     if (filesArray.length > 0 ) {
+                        this.images = [];
                         for (let fil of filesArray) {
 
                             let reader = new FileReader();
@@ -174,7 +172,6 @@
                                     url: reader.result  // Base64 string for preview image
                                 });
                             };
-                            console.log('fil ===>', fil);
                             reader.readAsDataURL(fil);
                         }
                     }
