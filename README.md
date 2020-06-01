@@ -15,7 +15,7 @@
 ```
 php 7.4.6
 apache 2.4
-
+mysql 5.7
 ```
 
 ## Project Setup
