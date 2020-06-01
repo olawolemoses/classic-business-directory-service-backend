@@ -203,6 +203,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
   },
   images: function images() {
+    console.log("this.business.images", this.business.images);
     var images = JSON.parse(this.business.images);
     console.log("this ---->images", images);
     return images;

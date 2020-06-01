@@ -179,6 +179,7 @@ export default {
                 return {}; // return empty object
         },
         images: function () {
+            console.log("this.business.images", this.business.images);
             const images = JSON.parse(this.business.images);
             console.log("this ---->images", images);
            return images;

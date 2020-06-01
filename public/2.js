@@ -173,7 +173,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             });
           });
         });
-        console.log("this.form", this.form);
       }
 
       this.$refs.modal.show();
@@ -191,34 +190,32 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 console.log("sending form", _this2.form, _this2.images);
 
                 if (!_this2.business) {
-                  _context.next = 11;
+                  _context.next = 10;
                   break;
                 }
 
-                console.log("business update", _this2.business.id, _this2.business);
                 _this2.loading = false;
 
                 _this2.$refs.modal.hide();
 
-                _context.next = 9;
+                _context.next = 8;
                 return _this2.$inertia.post(_this2.route('business.update', {
                   business: _this2.business.id
                 }), _this2.form);
 
-              case 9:
-                _context.next = 16;
+              case 8:
+                _context.next = 14;
                 break;
 
-              case 11:
-                console.log("business store");
+              case 10:
                 _this2.loading = false;
 
                 _this2.$refs.modal.hide();
 
-                _context.next = 16;
+                _context.next = 14;
                 return _this2.$inertia.post(_this2.route('business.store'), _this2.form);
 
-              case 16:
+              case 14:
               case "end":
                 return _context.stop();
             }

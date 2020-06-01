@@ -134,7 +134,6 @@
                         images.map( image => {
                                 toDataURL(image).then(dataUrl => this.images.push({url: dataUrl}))
                         });
-                    console.log("this.form", this.form);
                 }   
                 this.$refs.modal.show();
             },
@@ -145,13 +144,11 @@
                 console.log("sending form", this.form, this.images);
                 
                 if(!!this.business){
-                    console.log("business update", this.business.id, this.business);
                     this.loading = false;
                     this.$refs.modal.hide();
                     await this.$inertia.post(this.route('business.update', {business: this.business.id}), this.form);
                 }
                 else{
-                    console.log("business store");
                     this.loading = false;
                     this.$refs.modal.hide();                    
                     await this.$inertia.post(this.route('business.store'), this.form);
