@@ -20,6 +20,9 @@ class AppServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        if(env('FORCE_HTTPS',false)) { // Default value should be false for local server
+            URL::forceSchema('https');
+        }        
         Builder::defaultStringLength(191);
         Date::use(CarbonImmutable::class);
     }

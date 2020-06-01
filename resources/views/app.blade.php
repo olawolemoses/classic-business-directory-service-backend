@@ -6,8 +6,14 @@
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
     <script src="{{ mix('/js/app.js') }}" defer></script>
     @routes
+
+    <script>
+        console.log(Ziggy.baseProtocol, window.location.protocol);
+        Ziggy.baseProtocol = window.location.protocol;
+        console.log(Ziggy.baseProtocol, window.location.protocol);
+    </script>
   </head>
-  
+
   <body>
     @inertia
   </body>
