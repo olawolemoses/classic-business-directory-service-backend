@@ -141,7 +141,6 @@
             async submit() {
                 this.loading = true;
                 this.form.images = this.images;
-                console.log("sending form", this.form, this.images);
                 
                 if(!!this.business){
                     this.loading = false;

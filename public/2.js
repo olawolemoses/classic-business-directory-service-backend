@@ -187,10 +187,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _this2.loading = true;
                 _this2.form.images = _this2.images;
-                console.log("sending form", _this2.form, _this2.images);
 
                 if (!_this2.business) {
-                  _context.next = 10;
+                  _context.next = 9;
                   break;
                 }
 
@@ -198,24 +197,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 _this2.$refs.modal.hide();
 
-                _context.next = 8;
+                _context.next = 7;
                 return _this2.$inertia.post(_this2.route('business.update', {
                   business: _this2.business.id
                 }), _this2.form);
 
-              case 8:
-                _context.next = 14;
+              case 7:
+                _context.next = 13;
                 break;
 
-              case 10:
+              case 9:
                 _this2.loading = false;
 
                 _this2.$refs.modal.hide();
 
-                _context.next = 14;
+                _context.next = 13;
                 return _this2.$inertia.post(_this2.route('business.store'), _this2.form);
 
-              case 14:
+              case 13:
               case "end":
                 return _context.stop();
             }
