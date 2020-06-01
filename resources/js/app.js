@@ -3,15 +3,9 @@ import Vue from 'vue'
 
 import Modal from '@/components/Modal.vue';
 
-
-require('./bootstrap');
-
-window.Vue = Vue;
-
 Vue.use(InertiaApp)
 
 console.log(window.route);
-console.log(window.$);
 
 Vue.mixin({
     methods: {

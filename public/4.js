@@ -203,10 +203,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
   },
   images: function images() {
-    var images = JSON.parse(this.business.images).map(function (image) {
-      return "http://localhost:8000/storage/" + image;
-    });
-    console.log("images", images);
+    console.log("this.business.images", this.business.images);
+    var images = JSON.parse(this.business.images);
+    console.log("this ---->images", images);
     return images;
   }
 }), _defineProperty(_layout$layout$comput, "created", function created() {

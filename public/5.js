@@ -90,7 +90,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     imageUrl: function imageUrl() {
-      return "".concat(_config__WEBPACK_IMPORTED_MODULE_0__["default"].siteUrl, "/storage/").concat(this.business.default_image);
+      return "".concat(this.business.default_image);
     }
   },
   data: function data() {
@@ -503,7 +503,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   "apiUrl": "http://127.0.0.1:8000/api",
-  "siteUrl": "http://127.0.0.1:8000"
+  "siteUrl": "http://127.0.0.1:8000",
+  "CLOUDINARY_API_KEY": "655847859633484",
+  "CLOUDINARY_API_SECRET": "t4l7Na05gUHzgFPmoZAoD09MNnE"
 });
 
 /***/ })
