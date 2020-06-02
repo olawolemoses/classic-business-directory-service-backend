@@ -14,7 +14,7 @@ class BusinessController extends Controller
     //
     public function list(Request $request)
     {
-        $businesses = Business::all();
+        $businesses = Business::where('status',1)->get();
 
         return response() ->json([
             'success' => true,
@@ -26,7 +26,7 @@ class BusinessController extends Controller
     public function index (Request $request) {
         $query = $request->input('q'); // <-- Change the query for testing.
         
-        $businesses = Business::search($query)->get();
+        $businesses = Business::search($query)->where('status', 1)->get();
         
         return response() ->json([
             'success' => true,
