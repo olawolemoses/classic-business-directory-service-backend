@@ -3,3 +3,12 @@ input, select, textarea, button, div, a {
     outline: none;
   }
 }
+
+
+* {
+    font-family: 'Roboto';
+  }
+
+  body {
+    background-color:#ccdef5;
+  }
