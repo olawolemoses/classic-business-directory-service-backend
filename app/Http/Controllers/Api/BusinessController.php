@@ -49,7 +49,7 @@ class BusinessController extends Controller
 
         return response() ->json([
             'success' => true,
-            'business' => new \stdClass(),
+            'business' => NULL,
             'businessCategories' => []
         ], 201);
     }    
