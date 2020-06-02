@@ -36,13 +36,21 @@ class BusinessController extends Controller
 
     public function show(Request $request, Business $business)
     {
-        $business->increment('views');
-        $businessCategories = $business->categories()->get();
+        if($business->status > 0){
+            $business->increment('views');
+            $businessCategories = $business->categories()->get();
+    
+            return response() ->json([
+                'success' => true,
+                'business' => $business,
+                'businessCategories' => $businessCategories
+            ], 201);
+        }
 
         return response() ->json([
             'success' => true,
-            'business' => $business,
-            'businessCategories' => $businessCategories
+            'business' => new \stdClass(),
+            'businessCategories' => []
         ], 201);
     }    
 
