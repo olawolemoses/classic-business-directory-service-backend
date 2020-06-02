@@ -25,13 +25,3 @@ export default {
   },  
 }
 </script>
-
-<style>
-  * {
-    font-family: 'Roboto';
-  }
-
-  body {
-    background-color:#ccdef5;
-  }
-</style>
