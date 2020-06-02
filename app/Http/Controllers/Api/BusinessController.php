@@ -48,7 +48,7 @@ class BusinessController extends Controller
         }
 
         return response() ->json([
-            'success' => true,
+            'success' => false,
             'business' => NULL,
             'businessCategories' => []
         ], 201);
