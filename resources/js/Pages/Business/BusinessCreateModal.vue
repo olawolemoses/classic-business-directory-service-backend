@@ -140,8 +140,8 @@
 
             async submit() {
                 this.loading = true;
-                this.form.images = this.images;
-                
+                this.form.images = [...this.images];
+                this.images = [];
                 if(!!this.business){
                     this.loading = false;
                     this.$refs.modal.hide();
@@ -149,7 +149,7 @@
                 }
                 else{
                     this.loading = false;
-                    this.$refs.modal.hide();                    
+                    this.$refs.modal.hide();                   
                     await this.$inertia.post(this.route('business.store'), this.form);
                 }
             },
