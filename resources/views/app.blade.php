@@ -8,9 +8,7 @@
     @routes
 
     <script>
-        console.log(Ziggy.namedRoutes, Ziggy.baseProtocol, window.location.protocol);
-        Ziggy.baseProtocol = window.location.protocol;
-        console.log(Ziggy.baseProtocol, window.location.protocol);
+
     </script>
   </head>
 

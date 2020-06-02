@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <inertia-link class="navbar-brand":href="route('home')">
+            <inertia-link class="navbar-brand" :href="route('home')">
                     <svg viewBox="0 0 512 512" height="25" class="text-center"
                 style="enable-background:new 0 0 512 512;"> <path style="fill:#52D6C6;"
                 d="M398.723,512H42.428c-7.797,0-14.176-6.379-14.176-14.176V50.953V14.176
